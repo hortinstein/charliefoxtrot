@@ -1,0 +1,14 @@
+{
+  "name": "charliefoxtrot",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "core-icons": "Polymer/core-icons#~0.5.1",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.1",
+    "paper-tabs": "Polymer/paper-tabs#~0.5.1"
+  }
+}

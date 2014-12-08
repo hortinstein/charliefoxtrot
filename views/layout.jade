@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport' content=' content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes')
+    title= "charliefoxtrot"
+    block css
+      link(rel='stylesheet', href='../css/style.css')
+      link(rel='stylesheet', href='../css/container.css')
+    block js
+      script(src='http://localhost:35729/livereload.js')
+      script(src="/components/webcomponentsjs/webcomponents.js")
+      
+      link(rel="import", href="../components/font-roboto/roboto.html")
+      link(rel="import", href="../components/core-header-panel/core-header-panel.html")
+      link(rel="import", href="../components/core-toolbar/core-toolbar.htm")
+      link(rel="import", href="../components/paper-tabs/paper-tabs.html")
+  body(touch-action="auto", unresolved)
+    block content
