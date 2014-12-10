@@ -21,29 +21,29 @@ router.get('/api/posts.json', function (req,res) {
   res.json([
   {
     "uid": 1,
-    "text" : "Have you heard about the Web Components revolution?",
-    "username" : "Eric",
-    "avatar" : "../images/avatar-01.svg",
+    "text" : "  stub",
+    "username" : "CoreOS1",
+    "avatar" : "http://oo.or.id/sites/default/files/field/image/coreos-logo.png",
     "favorite": false
   },
   {
     "uid": 2,
-    "text" : "Loving this Polymer thing.",
-    "username" : "Rob",
-    "avatar" : "../images/avatar-02.svg",
+    "text" : "  stub",
+    "username" : "CoreOS2",
+    "avatar" : "http://oo.or.id/sites/default/files/field/image/coreos-logo.png",
     "favorite": false
   },
   {
     "uid": 3,
-    "text" : "Loving this Polymer thing.",
-    "username" : "Rob",
-    "avatar" : "../images/avatar-02.svg",
+    "text" : "  stub",
+    "username" : "CoreOS3",
+    "avatar" : "http://oo.or.id/sites/default/files/field/image/coreos-logo.png",
     "favorite": false
   },{
     "uid": 3,
-    "text" : "Loving this Polymer thing.",
-    "username" : "Rob",
-    "avatar" : "../images/avatar-02.svg",
+    "text" : "  stub",
+    "username" : "CoreOS4",
+    "avatar" : "http://oo.or.id/sites/default/files/field/image/coreos-logo.png",
     "favorite": false
   }])
 });

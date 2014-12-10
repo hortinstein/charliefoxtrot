@@ -8,16 +8,14 @@ html.
       <style>
       :host {
         display: block;
-        width: 150%;
-      }
-      post-card {
-        margin: 10px;
+        width: relative;
+        margin: 20px;
       }
       </style>
 
       <post-service id="service" posts="{{posts}}"></post-service>
-      <core-media-query query="max-width: 640px" queryMatches="{{phoneScreen}}"></core-media-query>
-      <div layout vertical?="{{phoneScreen}}" horizontal?="{{!phoneScreen}}">
+      <core-media-query query="max-width: 800px" queryMatches="{{phoneScreen}}"></core-media-query>
+      <div layout center vertical?="{{phoneScreen}}" horizontal?="{{!phoneScreen}}">
         <template repeat="{{post,i in posts}}">
           <post-card
             favorite="{{post.favorite}}"
@@ -25,7 +23,9 @@ html.
             hidden?="{{show == 'favorites' && !post.favorite}}">
             <img src="{{post.avatar}}" width="70" height="70">
             <h2>{{post.username}}</h2>
-            <p>{{post.text}}</p>
+            <p>IP: {{post.text}}</p>
+            <p>RAM: {{post.text}}</p>
+            <p>CPU:{{post.text}}</p>
           </post-card>
         </template>
       </div>
