@@ -1,0 +1,22 @@
+html.  
+  <polymer-element name="packery-element" block>
+  <template>
+      <style>
+      :host {
+        width: 100%;
+        }
+      <style>
+      <content></content>
+    </template>
+    <script>
+      Polymer('post-card', {
+        domReady: function() {
+          this.packery = new Packery(this, {
+            // options
+            itemSelector: '*',
+            gutter: 10
+          });
+        }
+      });
+    </script>
+  </polymer-element>

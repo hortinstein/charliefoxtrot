@@ -2,41 +2,37 @@ html.
   <link rel="import" href="../components/polymer/polymer.html">
   <link rel="import" href="../post-service/post-service.html">
   <link rel="import" href="post-card.html">
+  <link rel="import" href="packery-element.html">
 
   <polymer-element name="post-list" attributes="show">
     <template>
       <style>
       :host {
-        display: block;
-        width: relative;
+        width: 250px;
+        height: 250px;
         margin: 20px;
       }
+     
       </style>
-
       <post-service id="service" posts="{{posts}}"></post-service>
-      <core-media-query query="max-width: 800px" queryMatches="{{phoneScreen}}"></core-media-query>
-      <div layout center vertical?="{{phoneScreen}}" horizontal?="{{!phoneScreen}}">
-        <template repeat="{{post,i in posts}}">
-          <post-card
-            favorite="{{post.favorite}}"
-            on-favorite-tap="{{handleFavorite}}"
-            hidden?="{{show == 'favorites' && !post.favorite}}">
-            <img src="{{post.avatar}}" width="70" height="70">
-            <h2>{{post.username}}</h2>
-            <p>IP: {{post.text}}</p>
-            <p>RAM: {{post.text}}</p>
-            <p>CPU:{{post.text}}</p>
-          </post-card>
+            <juicy-tile-list>
+     <template repeat="{{post,i in posts}}">
+     
+
+              <post-card class="item">
+                <img src="{{post.avatar}}" width="70" height="70">
+                <h2>{{post.username}}</h2>
+                <p>IP: {{post.text}}</p>
+                <p>RAM: {{post.text}}</p>
+                <p>CPU:{{post.text}}</p>
+              </post-card>
+           
+         
         </template>
-      </div>
+        <juicy-tile-list>
     </template>
 
     <script>
-    Polymer({
-      handleFavorite: function(event, detail, sender) {
-        var post = sender.templateInstance.model.post;
-        this.$.service.setFavorite(post.uid, post.favorite);
-      }
-    });
+      Polymer({});
     </script>
   </polymer-element>

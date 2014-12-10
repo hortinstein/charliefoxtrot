@@ -15,7 +15,9 @@ router.get('/post-list.html', function(req, res) {
 router.get('/post-service/post-service.html', function(req, res) {
   res.render('elements/post-service', { title: 'Express' });
 });
-
+router.get('/packery-element.html', function(req, res) {
+  res.render('elements/','packery-element', { title: 'Express' });
+});
 
 router.get('/api/posts.json', function (req,res) {
   res.json([
