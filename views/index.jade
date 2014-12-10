@@ -1,30 +1,32 @@
 extends layout
+
 block content
-    div.topbar
-        div.fill
-            div.container
-                a.brand(href='#') #{title}
-                ul.nav
-                    li.active
-                        a(href='#') Home
-                    li
-                        a(href='#about') About
-                    li
-                        a(href='#contact') Contact
-                form.pull-right(method="post", id="loginForm")
-                    input.input-small(id="username", type="text", name="User", placeholder="Username")
-                    input.input-small(id="password", type="password", name="Password", placeholder="Password")
-                    input.btn.primary(type="submit", value="Sign In")
-                p#loginPrompt.pull-right.login-prompt
-    div.container
-        div.content
-            div.page-header
-                h1 Main Page
-                small Welcome to #{title}
-            div.row
-                div.span4 
-                    h2 Page Content
-                div.span4
-                    h3 Secondary Content
-        div.footer
-            p &copy; test 2013
+
+  body(unresolved)
+  html.
+      <core-header-panel>
+
+        <core-toolbar>
+
+          <paper-tabs id="tabs" selected="all" self-end>
+            <paper-tab name="all">All</paper-tab>
+            <paper-tab name="favorites">Favorites</paper-tab>
+          </paper-tabs>
+
+        </core-toolbar>
+
+        <div class="container" layout vertical center>
+          <post-list show="all"></post-list>
+        </div>
+
+      </core-header-panel>
+
+      <script>
+      var tabs = document.querySelector('paper-tabs');
+      var list = document.querySelector('post-list');
+
+      tabs.addEventListener('core-select', function() {
+        list.show = tabs.selected;
+      });
+      </script>
+
